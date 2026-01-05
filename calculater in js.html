@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+   
+  </style>
+</head>
+<body>
+  <div style="position: absolute;top:200px;left:600px;">
+<table border="3" style="border-radius:10px;">  
+  <tr><input type="text" id="display" disabled style="background-color:grey;border:1px solid black;height:70px;width:300px;color:white;font-size:40px;border-radius:7px;"></tr>
+   
+     <tr><td > <button onclick="add('7')"style="width:70px;height:70px;background-color:red;border-radius:10px;font-size:30px;">7</button></td>
+     <td><button onclick="add('8')" style="width:70px;height:70px;background-color:red;border-radius:10px;font-size:30px;">8</button></td>
+    <td><button onclick="add('9')" style="width:70px;height:70px;background-color:red;border-radius:10px;font-size:30px;">9</button></td>
+     <td> <button onclick="add('/')"  style="width:70px;height:70px;background-color:yellow;border-radius:10px;font-size:30px;">÷</button></td></tr>
+
+      <tr><td><button onclick="add('4')" style="width:70px;height:70px;background-color:red;border-radius:10px;font-size:30px;">4</button></td>
+      <td><button onclick="add('5')" style="width:70px;height:70px;background-color:red;border-radius:10px;font-size:30px;">5</button></td>
+      <td><button onclick="add('6')" style="width:70px;height:70px;background-color:red;border-radius:10px;font-size:30px;">6</button></td>
+      <td><button  onclick="add('*')"  style="width:70px;height:70px;background-color:yellow;border-radius:10px;font-size:30px;">×</button></td></tr>
+
+      <tr><td><button onclick="add('1')" style="width:70px;height:70px;background-color:red;border-radius:10px;font-size:30px;">1</button></td>
+      <td><button onclick="add('2')" style="width:70px;height:70px;background-color:red;border-radius:10px;font-size:30px;">2</button></td>
+      <td><button onclick="add('3')" style="width:70px;height:70px;background-color:red;border-radius:10px;font-size:30px;">3</button></td>
+      <td><button onclick="add('-')" style="width:70px;height:70px;background-color:yellow;border-radius:10px;font-size:30px;">−</button></td></tr>
+
+      <tr><td><button onclick="add('0')" style="width:70px;height:70px;background-color:orange;border-radius:10px;font-size:30px;">0</button></td>
+        <td><button onclick="add('00')" style="width:70px;height:70px;background-color:orange;border-radius:10px;font-size:30px;">00</button></td>
+        <td><button onclick="add('000')" style="width:70px;height:70px;background-color:orange;border-radius:10px;font-size:30px;">000</button></td>
+       <td><button onclick="add('+')" style="width:70px;height:70px;background-color:yellow;border-radius:10px;font-size:30px;">+</button></td></tr>
+
+      <tr><td><button  onclick="clr()" style="width:70px;height:70px;background-color:pink;border-radius:10px;font-size:30px;">C</button></td>
+        <td><button  onclick="del()" style="width:70px;height:70px;background-color:pink;border-radius:10px;font-size:30px;">DEL</button></td>
+        <td><button onclick="add('.')" style="width:70px;height:70px;background-color:pink;border-radius:10px;font-size:30px;">.</button></td>
+        <td><button onclick="cal()" style="width:70px;height:70px;background-color:yellow;border-radius:10px;font-size:30px;">=</button></td>
+      
+    </tr>
+  </table>
+  </div>
+
+  <script type="text/javascript">
+    function add(value) {
+      document.getElementById("display").value += value;
+    }
+
+    function cal() {
+      
+        document.getElementById("display").value = eval(document.getElementById("display").value);  
+    }
+    function clr() {
+      document.getElementById("display").value ='';
+    }
+    function del() {
+     var a=document.getElementById("display");
+      display.value=display.value.slice(0,-1);
+    }
+function clr() {
+      document.getElementsByClassName('')[0].value = '';
+    }
+
+  </script>
+
+</body>
+</html>
